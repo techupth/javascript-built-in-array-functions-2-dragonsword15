@@ -345,7 +345,7 @@ const bills = [
     total: 37786,
     location: "Bangkok",
     paymentType: "Cash",
-    member: null,
+    member: 8,
   },
   {
     id: "35",
@@ -373,6 +373,7 @@ const bills = [
   },
 ];
 
-// Start coding here
-
-const newBills;
+let newbills = bills.filter((bill) => {
+  return bill.member !== null;
+});
+console.log(newbills)
